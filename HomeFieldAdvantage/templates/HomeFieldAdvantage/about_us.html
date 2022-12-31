@@ -1,0 +1,86 @@
+{% extends 'HomeFieldAdvantage/navbar.html'%} {% load static%}
+{% block additionalStyles %}
+<link rel="stylesheet" href="{% static 'HomeFieldAdvantage/css/about_us.css' %}" type="text/css">
+{% endblock %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+    <div class="round">
+        <img src="{% static 'HomeFieldAdvantage/images/AI.png' %}" alt="Machine learning image">
+    </div>
+    <div class="project_description">
+        <h1 style="text-align: center; margin:1.2em; color:orangered;">HomeFieldAdvantage</h1>   
+        <p>Home Field Advantage, at a base level, is a website that will allow end-users to leverage machine 
+            learning to predict the results of the upcoming Super Bowl within a confidence interval. It is our 
+            desire to utilize every aspect of the Computer Science and IT curricula to this point, including,
+            but not limited to:
+        </p>
+        <ul class="project_objective">
+            <li>Creating a lightweight Machine Learning model that predicts championship sports game results </li>
+            <li>Storing the website and data in a cloud-based environment</li>
+            <li>Scraping data from an online API into a database</li>
+            <li>Cleaning the data, analyzing it, and feeding it to the ML algorithm</li>
+            <li>Presenting the results on the website</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2 style="text-align: center; margin:2.2em; color:orangered;">Meet Our Team</h2>
+        <section class="team">
+              <div class="card_container">
+                <div class="ourTeam " style="margin-left: 160px;">
+                    <div class="teamMember">
+                      <img src="{% static 'HomeFieldAdvantage/images/profile.png' %}" class="roundImg" alt="image1">
+                      <div class="content">
+                        <h4>Nick Abel</h4>
+                        <p class="role">Team Lead</p>
+                        <p><a href="mailto:yali@oakland.edu"><button class="contact_btn">Contact</button></a></p>
+                      </div>
+                    </div>
+                  </div>
+                <div class="ourTeam">
+                  <div class="teamMember">
+                    <img src="{% static 'HomeFieldAdvantage/images/profile.png' %}" class="roundImg" alt="image1">
+                    <div class="content">
+                      <h4>JJ Ryan</h4>
+                      <p class="role">Product Owner</p>
+                      <p><a href="mailto:yali@oakland.edu"><button class="contact_btn">Contact</button></a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ourTeam">
+                  <div class="teamMember">
+                    <img src="{% static 'HomeFieldAdvantage/images/profile.png' %}" class="roundImg" alt="image1">
+                    <div class="content">
+                      <h4>Ya Li</h4>
+                      <p class="role">Developer</p>
+                      <p><a href="mailto:yali@oakland.edu"><button class="contact_btn">Contact</button></a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ourTeam">
+                  <div class="teamMember">
+                    <img src="{% static 'HomeFieldAdvantage/images/profile.png' %}" class="roundImg" alt="image1">
+                    <div class="content">
+                      <h4>Brianna McGraw</h4>
+                      <p class="role">Developer</p>
+                      <p><a href="mailto:yali@oakland.edu"><button class="contact_btn">Contact</button></a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ourTeam">
+                    <div class="teamMember">
+                      <img src="{% static 'HomeFieldAdvantage/images/profile.png' %}" class="roundImg" alt="image1">
+                      <div class="content">
+                        <h4>Devin Yang</h4>
+                        <p class="role">Developer</p>
+                        <p><a href="mailto:yali@oakland.edu"><button class="contact_btn">Contact</button></a></p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </section>
+    </div>
+</div>
+{% endblock content %}

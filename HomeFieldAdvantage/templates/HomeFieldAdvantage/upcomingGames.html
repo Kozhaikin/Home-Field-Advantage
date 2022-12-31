@@ -1,0 +1,38 @@
+{% extends 'HomeFieldAdvantage/navbar.html'%} {% load static%} 
+
+{% block content %} {% load static %}
+<style>
+    table {
+    background-color: rgb(230, 217, 204);
+    border-radius: 15px;
+    width: 97%;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 10px;
+}
+
+thead tr th {
+    text-align: center;
+    color: orangered;
+    background-color: rgb(230, 217, 204);
+    height: 35px;
+    line-height: 1.2;
+    vertical-align: bottom;
+    text-transform: none;
+    border:none;
+    border-bottom: 1px solid gray;
+    padding:5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+
+}
+tbody tr td {
+    height: 30px;
+    text-align: center;
+    color: black;
+    border: none;
+}
+</style>
+
+{% include 'HomeFieldAdvantage/sched.html' %}
+{% endblock content %}

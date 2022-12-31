@@ -1,0 +1,53 @@
+body{
+    text-align:center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.myPred_wrap{
+    display:inline-block;
+    background-color: lightsteelblue;
+    margin-top: 50px;
+    text-align:center;
+    height: 300px;
+    border: none;
+    width:80%;
+    border-radius: 20px;
+}
+h4{
+    text-align: center;
+    padding:20px;
+    font-size: 20px;
+    text-shadow: 2px 2px white;
+}
+
+.myPred_inner{
+    display: inline-block;
+    border-radius:15px;
+    padding:30px;
+    width:60%;
+    background-color: rgb(102 132 195);
+}
+.winner{
+    padding-bottom:15px;
+    color:orangered;
+}
+.winner span{
+    -webkit-text-stroke: 2px black;
+    text-shadow: 2px 2px white;
+    font-weight: 900;
+    font-size: 40px;
+}
+.game{
+    color: black;
+    padding-bottom:15px;
+    font-size:20px;
+
+}
+.win_prob{
+    color:orangered;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 1px 1px white;
+    font-weight: 900;
+    font-size: 30px;
+}
+

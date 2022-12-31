@@ -1,0 +1,52 @@
+
+form{
+    background-color: rgb(230, 217, 204);
+    border-radius: 15px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 10px; 
+}
+
+.floatChild{
+    width: 30%;
+}
+table {
+    background-color: rgb(230, 217, 204);
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-left: 40%;
+    border-color:lightslategrey;
+
+}
+
+tbody tr td {
+    height: 25px;
+    text-align: center;
+    color: black;
+    border: none;
+}
+tbody tr td input{
+    margin-left: 3px;
+    padding: 2px;
+    padding-left:8px;
+    border:none;
+    border-radius: 5px;
+}
+
+.submit{
+    margin: 25px;
+    width: 100%;
+    height:35px;
+    font-size: 16px;
+    border:none;
+    border-radius: 15px;
+    position: relative;
+    left:51%;
+}
+.submit:hover{
+    background-color: rgb(253, 88, 28);
+    color: white;
+    transition: 0.4s ease;
+}

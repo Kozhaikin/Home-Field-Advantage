@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'HomeFieldAdvantage/css/nav.css' %}">
+    <title>HFA {% block title %}{% endblock %} </title>
+    {% block additionalStyles %} {% endblock %}
+</head>
+
+<body>
+    {% load static %}
+    <div>
+        <div class="navbar">
+            <div>
+                <a class="logo" href="{% url 'HomeFieldAdvantage:home' %}"><img src="{% static 'HomeFieldAdvantage/images/logo.png' %}" alt="HFA" /></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="{% url 'HomeFieldAdvantage:home' %}">Home</a></li>
+                    <li><a href="{% url 'HomeFieldAdvantage:games' %}">Upcoming Games</a></li>
+                    <li><a href="{% url 'HomeFieldAdvantage:about_us' %}">About Us</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'HomeFieldAdvantage:my_prediction' %}">My Prediction</a></li>
+                    <li><a href="{% url 'HomeFieldAdvantage:logout' %}">Logout</a></li>
+                    {% else %}
+                    <li><a href="{% url 'HomeFieldAdvantage:login' %}">Login</a></li>
+                    <li><a href="{% url 'HomeFieldAdvantage:register' %}">Register</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+        </div>
+    {% block content %} {% endblock %}
+    <section class="reference" style="margin:20px; padding:10px; color:grey;">
+    <div class="container">
+        <div class="row ">
+            <div class="col">
+                <small>
+                   Credit: the dataset used in this project is obtained from
+                    <a href="https://www.sports-reference.com/" target="_blank">Sports Reference</a>
+                    and <a href="https://www.pro-football-reference.com/" target="_blank">Pro Football Reference</a>,
+                    using the API, <a href="https://www.sports-reference.com/" target="_blank">Sportsipy</a>.
+               </small>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

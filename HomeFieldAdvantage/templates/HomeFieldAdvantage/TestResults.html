@@ -1,0 +1,29 @@
+{% extends 'HomeFieldAdvantage/navbar.html' %}
+{% load static %}
+
+{% block additionalStyles %}
+<link rel="stylesheet" href="{% static 'HomeFieldAdvantage/css/predicted_result.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<div style="display: none;">
+    {{ data }}
+</div>
+<div class="wraper">
+    <div class="backgrd_image" >
+        <img src="{% static 'HomeFieldAdvantage/images/stadium.jpeg' %}" width="1450" height="600" alt="Stadium">
+
+        <div class="result_container">
+            <div class="winner">
+                <p><span>{{data.Winner.0}}</span> </p> </div>
+
+            <div class="game">
+                <p> <span>{{data.Game.0}}</span></p> </div>
+
+             <div class="win_prob">
+                   <p> <span>{{data.Win_Prob.0}}</span> Chance</p> </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

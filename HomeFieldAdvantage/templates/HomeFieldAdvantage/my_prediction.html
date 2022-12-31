@@ -1,0 +1,34 @@
+{% extends 'HomeFieldAdvantage/navbar.html'%} {% load static%} 
+{% block additionalStyles %}
+<link rel="stylesheet" href="{% static 'HomeFieldAdvantage/css/my_prediction.css' %}" type="text/css">
+{% endblock %} 
+{% block content %} {% load static %}
+
+<div style="display:none;">
+{{myPred}}
+    </div>
+<div class="myPred_wrap">
+    <div class="toPredBtn">
+        <h4>My Pick</h4>
+    </div>
+    
+    <div class="myPred_inner">
+        {% for value in myPred.values %}
+            {% for key in myPred.keys %}
+                {% if not key %}
+                    <p>{{ value }}</p>
+                {% endif %}
+            {% endfor %}
+            <div class="winner">
+                <p><span>{{myPred.Winner.0}}</span> </p> </div>
+
+            <div class="game">
+                <p> <span>{{myPred.Game.0}}</span></p> </div>
+
+            <div class="win_prob">
+                <p> <span>{{myPred.Win_Prob.0}}</span> Chance</p> </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'HomeFieldAdvantage/navbar.html' %}
+{% load static%}
+
+{% block additionalStyles %}
+<link rel="stylesheet" href="{% static 'HomeFieldAdvantage/css/homepage.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+{% load static%}
+<div class="background">
+        <img src="{% static 'HomeFieldAdvantage/images/home.png' %}" alt="Homepage">
+        <button class="pred_btn" onclick="location.href='/games/'" >Who Will Win?</button>
+        <div>
+            <h2 class="show" id="pred_result" > </h2>
+        </div>
+    </div>
+{% endblock content %}
